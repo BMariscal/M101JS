@@ -1,0 +1,15 @@
+<!doctype HTML>
+<html>
+  <head><title>Movie Entries</title></head>
+  <body>
+     <form action="/favorite_movie" method="POST">
+        <p>Enter your favorite movie</p>
+        {% for movie in movies%}
+          <p>
+            {{movie}} <br/><input type="text" name="movie" />
+          </p>
+        {% endfor %}
+        <input type="submit" value="Submit"/>
+     </form>
+  </body>
+</html>
