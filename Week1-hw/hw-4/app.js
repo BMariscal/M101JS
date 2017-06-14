@@ -34,7 +34,7 @@ MongoClient.connect('mongodb://localhost:27017/movies', function(err, db) {
         }
         else {
 
-            db.collection('favoriteMovies').insert({"title": favorite[0], "year": parseInt(favorite[1]), "imdb": favorite[2]})
+            db.collection('favoriteMovies').insertOne({"title": favorite[0], "year": parseInt(favorite[1]), "imdb": favorite[2]})
             res.send(`Your favorite movie is ${favorite[0]}. This movie came out in ${favorite[1]}`);
         }
     });
